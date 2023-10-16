@@ -48,7 +48,7 @@ setTimeout(() => {
         nextArrow: ".next",
         prevArrow: ".prev",
         speed: 3000,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
             {

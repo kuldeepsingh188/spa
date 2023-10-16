@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+.custam_container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* ---------------- color -----------*/
+.bgc_darkblue {
+    background: #377C8A;
+}
+
+.bg_lightblue {
+    background: rgba(55, 124, 138, 0.10);
+}
+
+.color_black {
+    color: black;
+}
+
+.color_white {
+    color: #FFF;
+}
+
+/* -------- loder ------------ */
+#bg_loader {
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(10deg, #FFF 21.38%, #E8F1FF 90.15%);
+    position: fixed;
+    z-index: 1200 !important;
+}
+
+.loader_imges {
+    animation: zoom-in 6s linear infinite;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- back to top ----------- */
+#button {
+    display: inline-block;
+    background-color: #66B9C5;
+    border: 1px solid #076787;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 70px;
+    right: 10px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+#button::after {
+    content: "";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3em;
+    line-height: 65px;
+    color: #076787;
+}
+
+#button:active {
+    background-color: #0F171F;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --------------- navbar ------------ */
+.menu {
+    font-size: 48px;
+    font-family: sans-serif;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closemenu {
+    font-size: 68px;
+}
+
+.navbar1 {
+    background: linear-gradient(150deg, #377C8A 13.41%, #66B9C5 82.58%);
+    position: fixed;
+    z-index: 229px !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: all 200ms linear;
+}
+
+.closbtn {
+    top: 20px;
+    right: 20px;
+}
+
+.contct_btn {
+    padding: 16px 32px;
+    border-radius: 64px;
+    background: var(--light-green, #66BAC6);
+    border: none;
+    transition: all 300ms linear;
+}
+
+.contct_btn:hover {
+    background: #fff;
+    color: #377C8A !important;
+    box-shadow: 0px 0px 105.53099px 0px rgba(0, 0, 0, 0.834);
+}
+
+.design::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 300ms linear;
+}
+
+.design:hover::after {
+    width: 100%;
+
+}
+
+/* ------------ header ----------- */
+.bg_darkblue {
+    background-image: url(../img/png/header_bg_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.dasboard {
+    max-width: 738.717px;
+    height: 525.31px;
+    border-radius: 20px;
+    background: #F9FEFF;
+    box-shadow: 0px 35.177px 105.53099px 0px rgba(0, 0, 0, 0.10);
+}
+
+.left_angle {
+    top: 14%;
+    left: 0;
+}
+
+.right_angle {
+    top: 0;
+    right: 0;
+}
+
+/* .--------- features --------- */
+.employee_card {
+    max-width: 350px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 0px 0px 105.53099px 0px rgba(0, 0, 0, 0.10);
+    transition: all 300ms linear;
+}
+
+.employee_card:hover {
+    background: #377C8A;
+    color: white !important;
+}
+
+.employee_card:hover h3 {
+    color: white !important;
+    transition: all 300ms linear;
+}
+
+.employee_card:hover p {
+    color: white !important;
+    transition: all 300ms linear;
+}
+
+.employee_card:hover .employee_detail {
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.employee_detail {
+    border-radius: 0px 0px 20px 20px;
+    background: #377C8A;
+    padding: 20px 45px;
+    width: 240px;
+    transition: all 300ms linear;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+
+.timeline::after {
+    content: ".";
+    border-right: 2px dashed #000;
+    opacity: 0.3;
+    position: absolute;
+    height: 60%;
+    top: 10%;
+    left: 6.5%;
+}
+
+.container::after {
+    content: url(../img/png/time_btn.png);
+    position: absolute;
+    left: 2px;
+    top: 5%;
+    z-index: 1;
+}
+
+.left::before {
+    content: url(../img/png/time_btn.png);
+    position: absolute;
+    top: 6%;
+    left: -3%;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+}
+
+.next {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--Grey, #646060) !important;
+    transition: all 300ms linear;
+}
+
+.prev {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--Grey, #646060) !important;
+    transition: all 300ms linear;
+}
+
+.next:hover {
+    border-radius: 4px;
+    background: #377C8A;
+   stroke: white !important;
+   color: white !important;
+}
+
+.prev:hover {
+    border-radius: 4px;
+    background: #377C8A;
+    color: #646060;
+}
+
+.fill{
+    stroke: none !important;
+}
+
+.fill:hover{
+    stroke: #FFF !important;
+}
+
+/* ---------- about -------------- */
+.learn {
+    padding: 16px 32px;
+    border-radius: 64px;
+    background: #377C8A;
+    border: none;
+    transition: all 300ms linear;
+}
+
+.learn:hover {
+    background: #ffff;
+    color: #076787 !important;
+    box-shadow: 0px 0px 105.53099px 0px rgba(0, 0, 0, 0.834);
+}
+
+.shado {
+    bottom: -25%;
+    right: 2%;
+}
+
+/* ----------- partner ----------- */
+.shado {
+    bottom: -25%;
+    left: 2%;
+}
+
+/* ------------- watch video -------------- */
+.set_video {
+    bottom: 0;
+    left: 45%;
+}
+
+/* ---------------- chose spa ------------------ */
+.gola {
+    width: 160px;
+    height: 160px;
+    border-radius: 500px;
+    background: linear-gradient(150deg, #377C8A 13.41%, #66B9C5 82.58%);
+}
+
+.icon_cercil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    padding: 13px;
+    background: rgba(55, 124, 137, 0.10);
+    transition: all 300ms linear;
+}
+
+.icon_cercil:hover {
+    background: #66B9C5;
+}
+
+.set_adcard {
+    top: 0;
+    left: 0;
+}
+
+.set_notes {
+    top: 58%;
+    left: 0;
+}
+
+.set_time {
+    top: 0;
+    right: 0;
+}
+
+.set_massege {
+    top: 58%;
+    right: 0;
+}
+
+/* ---------- footer ------------- */
+.form {
+    border-radius: 4px;
+    background: #377C8A;
+    padding: 16px 21px;
+}
+
+.name {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+    height: 38px;
+    background: transparent;
+}
+
+.email_box {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+    background: transparent;
+    height: 38px;
+}
+
+.submit {
+    padding: 11.321px 22.643px;
+    border: none;
+    border-radius: 45.286px;
+    background: var(--light-green, #66BAC6);
+    transition: all 300ms linear;
+}
+
+.submit:hover {
+    background: #fff;
+    color: #076787;
+    box-shadow: 0px 0px 105.53099px 0px rgba(0, 0, 0, 0.834);
+}
+
+.fchang::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #000;
+    transition: all 300ms linear;
+}
+
+.fchang:hover::after {
+    width: 100%;
+    opacity: 0.5;
+
+}
+
+.last_line {
+    background-color: #000;
+    height: 1.25px;
+    opacity: 0.1;
+}
+
+.f_block {
+    top: 12%;
+    left: 0;
+}
+
+.f_angle {
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width:1200px) {
+    .set_adcard {
+        top: 0;
+        left: -2%;
+    }
+
+    .set_time {
+        top: 0;
+        right: -2%;
+    }
+}
+
+@media (min-width: 992px) {
+    .bg_darkblue {
+        background-image: url(../img/png/header_bg_image.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100% 80%;
+    }
+}
+
+@media (max-width:768px) {
+    .shado {
+        bottom: -15%;
+        left: 0;
+    }
+}
+
+@media (max-width:576px) {
+    .left_angle {
+        top: 30%;
+        left: 0;
+    }
+}
